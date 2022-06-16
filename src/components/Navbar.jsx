@@ -22,10 +22,11 @@ const Navbar = () => {
   <Image src='https://www.schemaapp.com/wp-content/uploads/2017/01/Shopify_logo_icon-980x1024.png' alt='Dan Abramov' />
 </Box>
   <Link to={'/'}>Home</Link>
-  <Link to={'/start'}>Start</Link>
-  <Link to={'/sell'}>Sell</Link>
-  <Link to={'/market'}>Market</Link>
+  <Link to={'/start'}>Men</Link>
+  <Link to={'/sell'}>Women</Link>
+  <Link to={'/market'}>Kid</Link>
   <Link to={'/manage'}>Manage</Link>
+  <Link to={'/cart'}>Cart</Link>
   <Link to={'/login'}>Login</Link>
   </Flex>
   </Box>
