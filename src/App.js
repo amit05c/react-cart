@@ -10,6 +10,7 @@ import Manage from './pages/Manage';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
 import MensData from './pages/MensData';
+import { AuthPrivate } from './Hoc/AuthPrivate';
 
 
 function App() {
@@ -19,14 +20,14 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/start" element={<Start />} />
-        <Route path="/sell" element={<Sell />} />
-        <Route path="/market" element={<Market />} />
-        <Route path="/manage" element={<Manage />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/start" element={<AuthPrivate><Start /></AuthPrivate> } />
+        <Route path="/sell" element={<AuthPrivate><Sell /></AuthPrivate> } />
+        <Route path="/market" element={ <AuthPrivate><Market /></AuthPrivate> } />
+        <Route path="/manage" element={<AuthPrivate><Manage /></AuthPrivate> } />
+        {/* <Route path="/cart" element={ <AuthPrivate><Cart /></AuthPrivate> } /> */}
         <Route path="/login" element={<Login />} />
-        <Route path="/manage/:id" element={<MensData />} />
-        <Route path="/manage/:id/:id" element={<Cart />} />
+        <Route path="/manage/:id" element={<AuthPrivate><MensData /></AuthPrivate> } />
+        <Route path="/manage/:id/:id" element={<AuthPrivate><Cart /></AuthPrivate> } />
         
 
       
